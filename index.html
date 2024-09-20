@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Hostel Evacuation Model (Team 2)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+		<!-- d3 is for data visualization -->
+		<script type="text/javascript" src="lib/d3.min.js"></script>
+		
+		<!-- inspectElement is useful for debugging javascript objects -->
+		<script type="text/javascript" src="lib/inspectElement.js"></script>
+				
+		<!-- custom styles for this application -->
+		<link rel="stylesheet" href="styles/basicagentmodel.css" media="screen">
+
+</head>
+<!-- Set class to official for more formal font; unofficial for informal font -->
+<body class="official bgColor0">
+	<p style="position:absolute;top:2%;left:3%; font-size:18px">Simulation Parameters</p>
+	<div class = "placeholder-box">
+		<p style="position:absolute;top:2.5%;left:5%"> 1) Simulation Speed </p>
+		<p><input id="slider1" type="range" min="0" value="300" max="5000" step="10" onchange="redrawWindow();" style="position:absolute;top:10.5%;left:5%"/></p>
+		
+		<p style="position:absolute;top:13.5%;left:5%"> 2) Probability of Arrival </p>
+		<p><input id="slider2" type="number" min="0" value="1" max="1" step="0.05" onchange="redrawWindow();" style="position:absolute;top:23.5%;left:20%; width: 50px" /></p>
+		
+		<p style="position:absolute;top:25.5%;left:5%"> 3) # of Students for floor: </p>
+		
+		<p style="position:absolute;top:34%;left:13%"> 1: </p>
+		<p><input id="input1" type="number" min="0" value="20"  onchange="redrawWindow();" style="position:absolute;top:37.5%;left:20%;width: 50px;" /></p>
+		
+		<p style="position:absolute;top:39%;left:13%"> 2: </p>
+		<p><input id="input2" type="number" min="0" value="20"  onchange="redrawWindow();" style="position:absolute;top:42.5%;left:20%;width: 50px;" /></p>
+		
+		<p style="position:absolute;top:44%;left:13%"> 3: </p>
+		<p><input id="input3" type="number" min="0" value="20"  onchange="redrawWindow();" style="position:absolute;top:47.5%;left:20%;width: 50px;" /></p>
+		
+		<p style="position:absolute;top:49%;left:13%"> 4: </p>
+		<p><input id="input4" type="number" min="0" value="20"  onchange="redrawWindow();" style="position:absolute;top:52.5%;left:20%;width: 50px;" /></p>
+		
+		<p style="position:absolute;top:54%;left:13%"> 5: </p>
+		<p><input id="input5" type="number" min="0" value="20"  onchange="redrawWindow();" style="position:absolute;top:57.5%;left:20%;width: 50px;" /></p>
+		
+		<p style="position:absolute;top:59%;left:13%"> 6: </p>
+		<p><input id="input6" type="number" min="0" value="20"  onchange="redrawWindow();" style="position:absolute;top:62.5%;left:20%;width: 50px;" /></p>
+		
+		<p style="position:absolute;top:64%;left:13%"> 7: </p>
+		<p><input id="input7" type="number" min="0" value="20"  onchange="redrawWindow();" style="position:absolute;top:67.5%;left:20%;width: 50px;" /></p>
+		
+		<p style="position:absolute;top:69%;left:13%"> 8: </p>
+		<p><input id="input8" type="number" min="0" value="20"  onchange="redrawWindow();" style="position:absolute;top:72.5%;left:20%;width: 50px;" /></p>
+		
+		<p style="position:absolute;top:74%;left:13%"> 9: </p>
+		<p><input id="input9" type="number" min="0" value="20"  onchange="redrawWindow();" style="position:absolute;top:77.5%;left:20%;width: 50px;" /></p>
+		
+		<p style="position:absolute;top:79%;left:7%"> 10: </p>
+		<p><input id="input10" type="number" min="0" value="20"  onchange="redrawWindow();" style="position:absolute;top:82.5%;left:20%;width: 50px;" /></p>
+		
+		<p style="position:absolute;top:84%;left:7%"> 11: </p>
+		<p><input id="input11" type="number" min="0" value="20"  onchange="redrawWindow();" style="position:absolute;top:87.5%;left:20%;width: 50px;" /></p>
+		
+		<p style="position:absolute;top:89%;left:7%"> 12: </p>
+		<p><input id="input12" type="number" min="0" value="20"  onchange="redrawWindow();" style="position:absolute;top:92.5%;left:20%;width: 50px;" /></p>
+	</div>
+	<!-- The surface is the main playing field for the game -->
+	<svg  id="surface" style="width:100% height:100%" xmlns="http://www.w3.org/2000/svg" version="1.1" onclick="toggleSimStep();">
+	</svg>
+	
+	<div id="title"  style="position:absolute;bottom:0;left:0">Hostel Evacuation Model (Team 2)</div>
+	
+	
+	<a id="credits" href="https://www.flaticon.com/" style="position:absolute;bottom:0;right:0">Icons by flaticon.com</a>	
+	
+	
+	<!-- Anything below this line should be a popup window or dialog or a late-loading library -->
+	
+	<script type="text/javascript" src="lib/HostelModel.js"></script>
+	
+</body>
+</html>
